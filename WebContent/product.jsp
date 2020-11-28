@@ -1,5 +1,7 @@
+<%@page import="dao.ProductRepository"%>
 <%@ page contentType="text/html; charset=utf-8" %>
 <%@ page import="dto.Product" %>
+
 <jsp:useBean id="productDAO" class="dao.ProductRepository" scope="session" />
 
 <!DOCTYPE html>
@@ -10,7 +12,7 @@
 <title>상품 상세 정보</title>
 </head>
 <body>
-	<jsp:include page="Menu.jsp"/>
+	<jsp:include page="menu.jsp"/>
 	<div class = "jumbotron">
 		<div class = "container">
 			<h1 class = "display-3">상품목록</h1>
@@ -18,8 +20,10 @@
 	</div>
 	<%
 		String id = request.getParameter("id");
-		Product product = productDAO.getProductById(id);
+		ProductRepository dao = ProductRepository.getInstance();
+		Product product = dao.getProductById(id);
 	%>
+	
 	
 	<div class="container">
 		<div class="col-md-6">
