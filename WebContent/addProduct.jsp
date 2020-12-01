@@ -6,7 +6,7 @@
 <html>
 <head>
 <link rel="stylesheet"
-   href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+   href="./resources/css/bootstrap.min.css" 
    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
    crossorigin="anonymous">
 <title>상품 등록</title>
@@ -69,11 +69,17 @@
          <div class="form-group row">
             <label class="col-sm-2">상태</label>
             <div class="col-sm-5">
-               <input type="radio" name="condition" value="New"> 신규 제품 <input
-                  type="radio" name="condition" value="Old"> 중고 제품 <input
-                  type="radio" name="condition" value="Refurbished"> 재생 제품
+               <input type="radio" name="condition" value="New"> 신규 제품 
+               <input type="radio" name="condition" value="Old"> 중고 제품 
+               <input type="radio" name="condition" value="Refurbished"> 재생 제품
             </div>
          </div>
+         <div class="form-group row">
+			<label class="col-sm-2">이미지</label>
+			<div class="col-sm-5">
+				<input type="file" name="productImage" class="form-control">
+			</div>
+		</div>
          <div class="form-group row">
             <div class="col-sm-offset-2 col-sm-10">
                <input type="submit" value="등록" class="btn btn-primary">
